@@ -1,0 +1,36 @@
+{
+	"index.html": {
+		"resources": [
+			"images/silder2.jpg",
+			"images/silder5.jpg",
+			"js/mui.min.js",
+			"images/silder4.jpg",
+			"images/slider1.jpg",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"images/touxiang.jpg",
+			"images/silder3.jpg",
+			"fonts/iconfont.woff",
+			"images/gequ.jpg",
+			"images/2.jpg",
+			"images/3.jpg",
+			"images/1.jpg",
+			"js/mui.js",
+			"js/jquery-2.2.3.min.js",
+			"images/10.jpg",
+			"images/7.jpg",
+			"images/9.jpg",
+			"images/8.jpg",
+			"images/jingpin.jpg",
+			"images/11.jpg",
+			"images/4.jpg",
+			"images/6.jpg",
+			"images/4_3.png",
+			"images/4_2.png",
+			"images/4_4.png",
+			"images/4_1.png"
+		]
+	}
+}

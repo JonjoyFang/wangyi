@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/iconfont.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/mui.min.js"></script>
+    	<style>
+    		/*.mui-content{
+    			min-height: 480px;
+    		}*/
+			.mui-control-content {
+				height: 480px;
+			}
+			.mui-slider-indicator {
+				bottom: 0;
+			}
+			.mui-slider {
+				background-color: #f2f2f2;
+			}
+		</style>
+    
+</head>
+
+<body>
+<!-- 主界面不动、菜单移动 -->
+<!-- 侧滑导航根容器 -->
+<div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+  <!-- 菜单容器 -->
+  <aside class="mui-off-canvas-left" id="offCanvasSide">
+  	
+    <div class="mui-scroll-wrapper">
+    	<div class="mui-scroll">
+    	<header class="mui-bar mui-bar-nav aside_photo">
+        	<div class="touxiang"><img src="images/touxiang.jpg" alt="" /></div>
+        	<div class="under_img">
+        		<div class="under_img_left">方小七123<span></span></div>
+        		<button class="under_img_right"><span class="iconfont icon-jinbi"></span>签到</button>
+        	</div>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item">
+				<span class="mui-tab-label">设置</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-tab-label">退出应用</span>
+			</a>
+			
+		</nav>
+        <div class="mui-content" style="margin-top: 60px; overflow: scroll;">
+        <ul class="mui-table-view mui-table-view-chevron">
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-youxiang aside_li_ico"></span>我的消息</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-huiyuan aside_li_ico huiyuan"></span>会员中心</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-gouwuche aside_li_ico huiyuan"></span>商城</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-iconalitubiaomoban aside_li_ico huiyuan"></span>在线听歌免流量</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-yinle3 aside_li_ico huiyuan"></span>听歌识曲</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-huanfu aside_li_ico huiyuan"></span>主题换肤</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-dengpao aside_li_ico huiyuan"></span>夜间模式</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-lishi aside_li_ico huiyuan"></span>定时停止播放</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-saoma aside_li_ico huiyuan"></span>扫一扫</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-yun aside_li_ico huiyuan"></span>我的音乐云盘</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-naozhong aside_li_ico huiyuan"></span>音乐闹钟</li>
+        	<li class="mui-table-view-cell mui-media"><span class="iconfont icon-jiashi aside_li_ico huiyuan"></span>驾驶模式</li>
+        </ul>
+		</div>
+      
+    		
+    	</div>
+      <!--mui-scroll  end-->
+    </div>
+   <!-- mui-scroll-wrapper  end-->
+  </aside>
+  <!-- 主页面容器 -->
+  <div class="mui-inner-wrap">
+    <!-- 主页面标题 -->
+    <header class="mui-bar mui-bar-nav head">
+      <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left ico-head" href="#offCanvasSide"></a>
+      <h1 id="segmentedControl" class="mui-title mui-segmented-control control_1">
+	      <a class="iconfont icon-wangyiyunyinlezizhi iconfont_head mui-control-item control_1_a mui-active" href="#head1"></a>
+	      <a class="iconfont icon-yinle1 iconfont_head mui-control-item control_1_a" href="#head2"></a>
+	      <a class="iconfont icon-pengyou iconfont_head mui-control-item control_1_a" href="#head3"></a>
+      </h1>
+      <a class="mui-icon mui-action-menu mui-icon mui-icon-search mui-pull-right ico-head" href="#offCanvasSide"></a>
+    </header>
+    <nav class="mui-bar mui-bar-tab bottom">
+    	<div class="mui-tab-item mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="images/gequ.jpg" />
+					<div class="mui-media-body">
+						<div class="body1">
+						让我留在你身边（原唱作者陈奕迅）
+						<p class="mui-text-left">唐汉霄</p>
+						</div>
+						<div class="body2">
+							<span class="iconfont icon-liebiao bottom_ico bottom_ico1"></span>
+							<span class="iconfont icon-bofang bottom_ico"></span>
+							<span class="iconfont icon-xiayishou bottom_ico"></span>
+						</div>
+					</div>
+				</div>
+		</div>
+			
+	</nav>
+    <div id="#head1" class="mui-content mui-control-content mui-active">
+      
+        <!-- 主界面具体展示内容 -->
+				<div id="slider" class="mui-slider">
+					<div id="segmentedControl" class="mui-segmented-control control_1">
+					<a class="mui-control-item control_1_a mui-active" href="#item1" >个性推荐</a>
+					<a class="mui-control-item control_1_a" href="#item2">歌单</a>
+					<a class="mui-control-item control_1_a" href="#item3">主播电台</a>
+					<a class="mui-control-item control_1_a" href="#item4">排行榜</a>
+					</div>
+				<div>
+			  	<!--  选项卡end-->
+      			<div id="item1" class="mui-control-content mui-active">
+			  	<div id="scroll" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+						  <!--图片轮播开始-->
+						  	<div class="mui-slider">
+							  <div class="mui-slider-group mui-slider-loop">
+							    <!--支持循环，需要重复图片节点-->
+							    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/silder5.jpg" /></a></div>
+							    <div class="mui-slider-item"><a href="#"><img src="images/slider1.jpg" /></a></div>
+							    <div class="mui-slider-item"><a href="#"><img src="images/silder2.jpg" /></a></div>
+							    <div class="mui-slider-item"><a href="#"><img src="images/silder3.jpg" /></a></div>
+							    <div class="mui-slider-item"><a href="#"><img src="images/silder4.jpg" /></a></div>
+							    <div class="mui-slider-item"><a href="#"><img src="images/silder5.jpg" /></a></div>
+							    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/slider1.jpg" /></a></div>
+							    <!--支持循环，需要重复图片节点-->
+							  </div>
+							  <div class="mui-slider-indicator">
+							    	<div class="mui-indicator mui-active"></div>
+							    	<div class="mui-indicator"></div>
+							    	<div class="mui-indicator"></div>
+							    	<div class="mui-indicator"></div>
+							    	<div class="mui-indicator"></div>
+							    </div>
+							</div>
+							<!--图片轮播结束-->
+				
+						<div class="mui-row" style="border-bottom: 1px solid #ddd;">
+							<div class="mui-col-sm-4 mui-col-xs-4 mui-text-center pad_20">
+								<li class="mui-table-view-cell">
+								<span class="iconfont icon-shouyinji01 tubiao_bor"></span>
+								<div class="margin_10">私人FM</div>
+								</li>
+							</div>
+							<div class="mui-col-sm-4 mui-col-xs-4 mui-text-center pad_20">
+								<li class="mui-table-view-cell">
+								<span class="tubiao_bor">23</span>
+								<div class="margin_10">每日歌曲推荐</div>
+								</li>
+							</div>
+							<div class="mui-col-sm-4 mui-col-xs-4 mui-text-center pad_20">
+								<li class="mui-table-view-cell">
+								<span class="iconfont icon-paixingbang tubiao_bor"></span>
+								<div class="margin_10">云音乐热歌榜</div>
+								</li>
+							</div>
+						</div>
+				
+						<!--私人FM 每日歌曲推荐 云音乐热歌榜  end-->
+						<div class="title">
+							<div class="title_left"><span class="iconfont icon-jiesuanri ritui"></span>推荐歌单</div>
+							<div class="title_right">更多<span class="iconfont icon-xiangyoujiantou"></span></div>
+						</div>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/1.jpg">
+									<div class="mui-media-body">
+										【华语】創作是一种态度，華语乐坛唱作人。
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/2.jpg">
+									<div class="mui-media-body">
+										带上耳机听饶舌歌手用歌词讲故事
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/3.jpg">
+									<div class="mui-media-body">
+										韩剧的OST女王们
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/7.jpg">
+									<div class="mui-media-body">
+										【韩国女团】那些有大Hit曲潜力的非主打
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/8.jpg">
+									<div class="mui-media-body">
+										「或许你喜欢和我一起跳舞」
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media">
+								<a href="javascript:;">
+									<img class="mui-media-object mui-pull-left" src="images/9.jpg">
+									<div class="mui-media-body">
+										柔情缱绻的女声，绵绵不绝的情思
+									</div>
+								</a>
+							</li>
+			
+						</ul>
+									
+				
+				
+			    </div>
+			  </div>
+			 
+			  </div>
+
+			 	<!-- item1  end-->
+			  	<div id="item2" class="mui-control-content">
+			  	<div id="scroll" class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+			    	<div class="item2_head">
+			    		<div class="item2_head_left">
+			    			<span class="jiacu">|</span>全部歌单</div>
+			    		<div class="item2_head_right">
+			    			<div class="right_content">
+			    				<span class="iconfont icon-yingyongzhongxin"></span>全部分类
+			    			</div>
+			    		</div>
+			    	</div>
+			    		<ul class="mui-table-view" style="width:100%">
+			    		<li class="mui-table-view-cell mui-media" style="width:100%">
+								<a href="javascript:;" style="width:100%">
+									<img class="mui-media-object mui-pull-left" src="images/jingpin.jpg">
+									<div class="mui-media-body">
+										<span class="iconfont icon-huangguan huangguan"></span>精品歌单
+										<p>复古合成器 少女心气</p>
+										<span class="rig">&gt;</span>
+									</div> 
+								</a>
+							</li>
+						</ul>
+						<ul class="mui-table-view mui-grid-view pad_ul">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<div class="img_per">
+									<img class="mui-media-object" src="images/1.jpg"/>
+									<span class="pos_pre"><span class="iconfont icon-yonghu"></span>JonjoyFang</span>
+									</div>
+									<div class="mui-media-body">
+										【华语】創作是一种态度，華语乐坛唱作人。
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<div class="img_per">
+									<img class="mui-media-object" src="images/7.jpg"/>
+									<span class="pos_pre"><span class="iconfont icon-yonghu"></span>JonjoyFang</span>
+									</div>
+									<div class="mui-media-body">
+										【韩国女团】那些有大Hit曲潜力的非主打
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<div class="img_per">
+									<img class="mui-media-object" src="images/8.jpg"/>
+									<span class="pos_pre"><span class="iconfont icon-yonghu"></span>JonjoyFang</span>
+									</div>
+									<div class="mui-media-body">
+										「或许你喜欢和我一起跳舞」
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<div class="img_per">
+									<img class="mui-media-object" src="images/9.jpg"/>
+									<span class="pos_pre"><span class="iconfont icon-yonghu"></span>JonjoyFang</span>
+									</div>
+									<div class="mui-media-body">
+										柔情缱绻的女声，绵绵不绝的情思
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<div class="img_per">
+									<img class="mui-media-object" src="images/10.jpg"/>
+									<span class="pos_pre"><span class="iconfont icon-yonghu"></span>JonjoyFang</span>
+									</div>
+									<div class="mui-media-body">
+										『ACG纯音』萌？可爱？这就燃给你看！
+									</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<a href="#">
+									<div class="img_per">
+									<img class="mui-media-object" src="images/11.jpg"/>
+									<span class="pos_pre"><span class="iconfont icon-yonghu"></span>JonjoyFang</span>
+									</div>
+									<div class="mui-media-body">
+										致高考|你是自己不灭的火焰
+									</div>
+								</a>
+							</li>
+						</ul>
+				</div>
+				</div>
+			    </div>
+			    <!-- item2  end-->
+			    <div id="item3" class="mui-control-content">
+			    <div id="scroll" class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+			    	<div id="Gallery" class="mui-slider" style="height: 140px;">
+					<div class="mui-slider-group" style="height: 140px;">
+					<div class="mui-slider-item" style="height: 118px;">
+				                <ul class="mui-table-view mui-grid-view" style="background: #f2f2f2;">
+				                    <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+				                    	<span class="iconfont icon-pindaoye"></span>
+				                        <div class="mui-media-body">明星做主播</div></a></li>
+				                    <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+				                    	<span class="iconfont icon-huatong1"></span>
+				                        <div class="mui-media-body">创作|翻唱</div></a></li>
+		                            <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                            	<span class="iconfont icon-xiaolian"></span>
+		                            	<div class="mui-media-body">脱口秀</div></a></li>
+		                    		<li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                    			<span class="iconfont icon-xiaolianxiaolian"></span>
+		                            	<div class="mui-media-body">情感调频</div></a></li>
+		                            <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                            	<span class="iconfont icon-musicnote"></span>
+		                            	<div class="mui-media-body">音乐故事</div></a></li>
+		                    		<li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                    			<span class="iconfont icon-xiaoshuo"></span>
+		                            	<div class="mui-media-body">有声小说</div></a></li>
+		                            <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                            	<span class="iconfont icon-lishi1"></span>
+		                            	<div class="mui-media-body">人文历史</div></a></li>
+		                    		<li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                    			<span class="iconfont icon-naiping1"></span>
+		                            	<div class="mui-media-body">亲子宝贝</div></a></li>
+		                            
+				                </ul>
+				        </div>
+				        <div class="mui-slider-item" style="height: 118px;">
+				                <ul class="mui-table-view mui-grid-view" style="background: #f2f2f2;">
+				                    <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+				                    	<span class="iconfont icon-pindaoye"></span>
+				                        <div class="mui-media-body">明星做主播</div></a></li>
+				                    <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+				                    	<span class="iconfont icon-huatong1"></span>
+				                        <div class="mui-media-body">创作|翻唱</div></a></li>
+		                            <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                            	<span class="iconfont icon-xiaolian"></span>
+		                            	<div class="mui-media-body">脱口秀</div></a></li>
+		                    		<li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                    			<span class="iconfont icon-xiaolianxiaolian"></span>
+		                            	<div class="mui-media-body">情感调频</div></a></li>
+		                            <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                            	<span class="iconfont icon-musicnote"></span>
+		                            	<div class="mui-media-body">音乐故事</div></a></li>
+		                    		<li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                    			<span class="iconfont icon-xiaoshuo"></span>
+		                            	<div class="mui-media-body">有声小说</div></a></li>
+		                            <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                            	<span class="iconfont icon-lishi1"></span>
+		                            	<div class="mui-media-body">人文历史</div></a></li>
+		                    		<li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+		                    			<span class="iconfont icon-naiping1"></span>
+		                            	<div class="mui-media-body">亲子宝贝</div></a></li>
+		                            
+				                </ul>
+				        </div>
+				        <div class="mui-slider-item" style="height: 118px;">
+				                <ul class="mui-table-view mui-grid-view" style="background: #f2f2f2;">
+				                    <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+				                    	<span class="iconfont icon-pindaoye"></span>
+				                        <div class="mui-media-body">明星做主播</div></a></li>
+				                    <li class="mui-table-view-cell mui-media mui-col-xs-3"><a href="#">
+				                    	<span class="iconfont icon-huatong1"></span>
+				                        <div class="mui-media-body">创作|翻唱</div></a></li>
+				                </ul>
+				        </div>
+					        <div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+							</div>
+				    	</div>
+				    	</div>
+
+			    	<ul class="mui-table-view" style="margin:0 10px 20px 10px;border:1px solid #ddd;">
+			    		<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-right" src="images/jingpin.jpg">
+								<div class="mui-media-body">
+									主播电台排行榜&gt;
+									<p class='mui-ellipsis'><span>最火的节目和电台，</span>每日更新</p>
+								</div>
+							</a>
+						</li>
+			    	</ul>
+			    	<div class="title" style="font-size: 14px;">
+						<span class="jiacu">|</span>每日节目推荐
+					</div>
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/4.jpg">
+								<div class="mui-media-body">
+									幸福
+									<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/11.jpg">
+								<div class="mui-media-body">
+									木屋
+									<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/jingpin.jpg">
+								<div class="mui-media-body">
+									CBD
+									<p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/6.jpg">
+								<div class="mui-media-body">
+									CBD
+									<p class='mui-ellipsis'>三月，适合谈论失恋</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+			    	
+			    </div>
+			    </div>
+			    </div>
+			    <!-- item3  end-->
+			    <div id="item4" class="mui-control-content">
+			    <div id="scroll" class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+			    	<div class="title" style="font-size: 14px;">
+						<span class="jiacu">|</span>官方榜
+					</div>
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/4_1.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>1.让我留在你身边 - 唐汉霄</p>
+									<p class='mui-ellipsis'>2.stay with me(鬼怪ost)</p>
+									<p class='mui-ellipsis'>3.每次和你走在路上都会看见一只喵</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/4_2.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>1.something just like this</p>
+									<p class='mui-ellipsis'>2.凉凉（cover:张碧晨&杨宗纬）</p>
+									<p class='mui-ellipsis'>3.还不是因为你长得不好看</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/4_3.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>1.认真的老去</p>
+									<p class='mui-ellipsis'>2.我所谓的爱（吉他版）</p>
+									<p class='mui-ellipsis'>3.阿婆说</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/4_4.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>1.刚刚好</p>
+									<p class='mui-ellipsis'>2.童话镇 - 陈一发儿</p>
+									<p class='mui-ellipsis'>3.成都 - 赵雷</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					
+					<div class="title" style="font-size: 14px;">
+						<span class="jiacu">|</span>全球榜
+					</div>
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/4_1.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>1.让我留在你身边 - 唐汉霄</p>
+									<p class='mui-ellipsis'>2.stay with me(鬼怪ost)</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/4_2.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>1.something just like this</p>
+									<p class='mui-ellipsis'>2.凉凉（cover:张碧晨&杨宗纬）</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/4_3.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>1.认真的老去</p>
+									<p class='mui-ellipsis'>2.我所谓的爱（吉他版）</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/4_4.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>1.刚刚好</p>
+									<p class='mui-ellipsis'>2.童话镇 - 陈一发儿</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+			    	
+			    	
+			    </div>
+			    </div>
+			    </div>
+			    <!-- item4  end-->
+	</div>
+	<!--mui-content end-->
+      
+      
+    <div class="mui-off-canvas-backdrop"></div>
+  </div>
+ <!-- mui-inner-wrap  end-->
+</div>
+
+	<div id="#head2" class="mui-content mui-control-content">
+		22222
+	</div>
+	<div id="#head3" class="mui-content mui-control-content">
+		3333
+	</div>
+	<script type="text/javascript">
+		mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+//		手机端代码
+//		mui.plusReady(function(){
+//			//获得slider插件对象
+//			var gallery = mui('.mui-slider');
+//			gallery.slider({
+//			  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+//			});
+//			gallery.slider().gotoItem(5);//跳转到第index张图片，index从0开始；
+//		})
+
+//     pc端
+			//获得slider插件对象
+//			var gallery = mui('.mui-slider');
+//			gallery.slider({
+//		  	interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+//			});
+//			gallery.slider().gotoItem(5);//跳转到第index张图片，index从0开始；
+
+			mui.plusReady(function(){
+				//获得slider插件对象
+				var gallery = mui('.mui-slider');
+				gallery.slider({
+			  	interval:3000//自动轮播周期，若为0则不自动播放，默认为0；
+				});
+	           mui('.mui-scroll-wrapper').scroll({deceleration: 0.0005});
+	           
+	           
+       		});
+             	
+           
+		
+	</script>
+</body>
+</html>
